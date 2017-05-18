@@ -1,10 +1,15 @@
 public class Player {
 
-    public Player(char symbol) {
+    private char symbol;
 
+    public Player(char symbol) {
+        this.symbol = symbol;
     }
 
     public boolean play(PowGame g, int column) {
-        return false;
+        if( column >= g.getWidth() || column < 0){
+            return false;
+        }
+        return true;
     }
 }
